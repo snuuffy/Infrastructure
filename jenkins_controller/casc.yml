@@ -28,3 +28,20 @@ unclassified:
         triggers:
           skipScmCause: false
           skipUpstreamCause: false
+  locale:
+    ignoreAcceptLanguage: true
+    systemLocale: "en"
+  location:
+    url: "http://192.168.44.44:8880/"
+nodes:
+  - permanent:
+      labelString: "agent"
+      launcher:
+        ssh:
+          credentialsId: "jenkins_agent"
+          host: "jenkins_agent"
+          port: 22
+          sshHostKeyVerificationStrategy: "nonVerifyingKeyVerificationStrategy"
+      name: "agent"
+      remoteFS: "/home/jenkins/agent"
+      retentionStrategy: "always"
