@@ -22,7 +22,7 @@ jenkins:
       name: "agent"
       remoteFS: "/home/jenkins/agent"
       retentionStrategy: "always"
-      
+
 tool:
   sonarRunnerInstallation:
     installations:
@@ -41,8 +41,5 @@ unclassified:
         triggers:
           skipScmCause: false
           skipUpstreamCause: false
-  locale:
-    ignoreAcceptLanguage: true
-    systemLocale: "en"
   location:
     url: "http://192.168.44.44:8880/"
